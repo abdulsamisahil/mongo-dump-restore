@@ -10,6 +10,6 @@ Make sure you have the following Makefile tool installed or just execute the she
 ```bash
 make mongo
 # OR
-./mongo-dump.sh "first_source_mongo_uri" "second_source_mongo_uri"
+./mongo-dump.sh "source_mongo_uri_1" "source_mongo_uri_2"
 # etc
 ```
