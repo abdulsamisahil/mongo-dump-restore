@@ -1,26 +1,40 @@
-# mongo-dump-restore
-dumping live clusters to local mongo containers with persisting data volumes
+# MongoDB Data Dump and Restoration
+
+This project facilitates the transfer of data from live MongoDB clusters to local MongoDB containers while maintaining persistent data volumes. The need for managing two clusters and containers arises from simultaneous involvement in distinct projects.
 
 
-#### Prerequisites
-Make sure you have the following Makefile tool installed to invoke everything with command, or just execute the shell scripts as shown in below RUN:
+## Prerequisites
+To execute the processes seamlessly, ensure the installation of the Makefile tool, allowing streamlined command invocation. Alternatively, execute the shell scripts using the following guidelines:
+
 - [Makefile](https://stackoverflow.com/questions/2532234/how-to-run-a-makefile-in-windows)
 
 ### Run
-Prior to running the scripts, ensure you've `mongo:latest` image pulled in your `Docker Desktop` and have the docker desktop opened and running. 
+Before executing the scripts, make sure you have the `mongo:latest` image available in your Docker Desktop, and Docker Desktop is active.
+
+#### Execution steps
+
+
+Having Makefile?
 
 ```bash
 make mongo
+```
 
+OR
 
-# OR
+Execute the following steps in sequence:
 
-# STEP 1
+#### 1. Dump Live Data: 
+```bash
 ./mongo-dump.sh "source_mongo_uri_1" "source_mongo_uri_2"
+```
 
-# STEP 2
+#### 2. Run Local MongoDB Containers: 
+```bash
 ./mongo-local-run.sh
+```
 
-# STEP 3
+#### 3. Restore Data:  
+```bash
 ./mongo-restore.sh
 ```
