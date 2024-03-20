@@ -38,3 +38,8 @@ Execute the following steps in sequence:
 ```bash
 ./mongo-restore.sh
 ```
+
+#### 3. Dump cleanup:  
+```bash
+rm -r dump
+```
