@@ -17,7 +17,7 @@ Before executing the scripts, make sure you have the `mongo:latest` image availa
 Having Makefile?
 
 ```bash
-make mongo
+make mongo CONTAINER_NAME="" MONGO_URI=""
 ```
 
 OR
@@ -26,12 +26,12 @@ Execute the following steps in sequence:
 
 #### 1. Dump Live Data: 
 ```bash
-./mongo-dump.sh "source_mongo_uri_1" "source_mongo_uri_2"
+./mongo-dump.sh "mongo_uri"
 ```
 
 #### 2. Run Local MongoDB Containers: 
 ```bash
-./mongo-local-run.sh
+./mongo-local-run.sh "container_name"
 ```
 
 #### 3. Restore Data:  
