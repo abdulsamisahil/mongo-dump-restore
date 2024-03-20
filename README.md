@@ -39,7 +39,7 @@ Execute the following steps in sequence:
 ./mongo-restore.sh
 ```
 
-#### 3. Dump cleanup:  
+#### 4. Dump cleanup:  
 ```bash
 rm -r dump
 ```
